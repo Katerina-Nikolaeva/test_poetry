@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "src"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^6.0.0"
+black = "^23.3.0"
+isort = "^5.12.0"
+mypy = "^1.2.0"
+
+[tool.black]
+line-length = 119  # Максимально допустимая длина строки
+target-version = ['py310']  # Целевая версия Python
+skip-magic-trailing-comma = true  # Пропускать магические запятые в конце
+safe = true  # Включить безопасный режим (безопасные преобразования)
+preview = true  # Включить предварительный просмотр предстоящих изменений
+exclude = '\.git|\_\_pycache\|*.egg-info'
+
+[tool.isort]
+profile = "black"  # Профиль совместимости с black
+line_length = 119  # Длина строки (соответствует black)
+
+[tool.mypy]
+disallow_untyped_defs = true
+warn_return_any = true
+exclude = ['\.git/', '__pycache__/', 'venv/']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
