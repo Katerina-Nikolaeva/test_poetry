@@ -1,16 +1,16 @@
 from src.masks import get_mask_account, get_mask_card_number
-from src.widget import mask_account_card, get_date
+from src.widget import get_date, mask_account_card
 
 if __name__ == "__main__":
-    # card_number = "7000792289606361"
-    # print(f"-> card number:        {card_number}")
-    # card_number_masked = get_mask_card_number(card_number)
-    # print(f"-> card number masked: {card_number_masked}")
-    #
-    # account = "73654108430135874305"
-    # print(f"-> account: {account}")
-    # mask_account = get_mask_account(account)
-    # print(f"-> masked account: {mask_account}")
+    card_number = "7000792289606361"
+    print(f"-> card number:        {card_number}")
+    card_number_masked = get_mask_card_number(card_number)
+    print(f"-> card number masked: {card_number_masked}")
+
+    account = "73654108430135874305"
+    print(f"-> account: {account}")
+    mask_account = get_mask_account(account)
+    print(f"-> masked account: {mask_account}")
 
     account_data = "Счет 73654108430135874305"
     print(f"-> account data: {account_data}")
