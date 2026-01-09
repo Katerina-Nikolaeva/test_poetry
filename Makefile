@@ -3,22 +3,32 @@ lint: black isort flake8 mypy
 
 # Запуск black
 black:
-	poetry run black .
+	@echo
+	@echo "-> Run black..."
+	@poetry run black .
 
 # Запуск isort
 isort:
-	poetry run isort .
+	@echo
+	@echo "-> Run isort..."
+	@poetry run isort .
 
 # Запуск flake8
 flake8:
-	poetry run flake8 .
+	@echo
+	@echo "-> Run flake8..."
+	@poetry run flake8 .
 
 # Запуск mypy
 mypy:
-	poetry run mypy .
+	@echo
+	@echo "-> Run mypy..."
+	@poetry run mypy .
 
 # Очистка
 clean:
+	@echo
+	@echo "-> Clean up..."
 	rm -rf .mypy_cache
 	rm -rf __pycache__
 	rm -rf *.egg-info
