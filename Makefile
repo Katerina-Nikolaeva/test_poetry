@@ -37,7 +37,7 @@ coverage:
 	@echo "-> Check tests coverage..."
 	@poetry run pytest --cov
 
-coverage-open: coverage-run
+coverage-open: coverage
 	@echo
 	@echo "-> Open tests coverage..."
 	@open htmlcov/index.html
