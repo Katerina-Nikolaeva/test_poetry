@@ -6,12 +6,20 @@ authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pytest = "^9.0.2"
 
 [tool.poetry.group.lint.dependencies]
 flake8 = "^6.0.0"
 black = "^23.3.0"
 isort = "^5.12.0"
 mypy = "^1.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.2"
+pytest-cov = "^7.0.0"
+
+[tool.pytest.ini_options]
+addopts = "--cov=test --cov-report=html"
 
 [tool.black]
 line-length = 119  # Максимально допустимая длина строки
