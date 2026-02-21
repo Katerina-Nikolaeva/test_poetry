@@ -59,7 +59,7 @@ def test_filter_by_currency_existing(sample_transactions):
     filtered = list(filter_by_currency(sample_transactions, "USD"))
     assert len(filtered) == 3  # Три транзакции с USD
     ids = sorted([item["id"] for item in filtered])
-    assert ids == [895315941, 142264268, 939719570]  # Сортируем id для сравнения
+    assert ids == [142264268, 895315941, 939719570]  # Сортируем id для сравнения
 
 
 def test_filter_by_currency_no_matching_transactions(sample_transactions):
@@ -130,7 +130,8 @@ def test_transaction_descriptions_multiple():
             "to": "Счет 14211924144426031657",
         },
     ]
-    expected_descriptions = ["Покупка товаров", "Пополнение счета", "Возврат средств"]
+    expected_descriptions = ["Перевод организации", "Перевод со счета на счет", "Перевод со счета на счет",
+                             "Перевод с карты на карту", "Перевод организации"]
     actual_descriptions = list(transaction_descriptions(transactions))
     assert actual_descriptions == expected_descriptions
 
