@@ -161,7 +161,7 @@ def test_card_number_generator_first():
 
 # Тест №2: Генерируем последний номер карты
 def test_card_number_generator_last():
-    last_gen = card_number_generator(end="0000000000000002")
+    last_gen = card_number_generator(stop="0000000000000002")
     cards = list(last_gen)
     assert cards[-1] == "0000 0000 0000 0002"
 
@@ -176,22 +176,22 @@ def test_card_number_generator_formatting():
 
 # Тест №4: Граничный случай, когда диапазон состоит всего из одного элемента
 def test_one_element_range():
-    single_gen = card_number_generator(start="0000000000000001", end="0000000000000001")
+    single_gen = card_number_generator(start="0000000000000001", stop="0000000000000001")
     cards = list(single_gen)
     assert len(cards) == 1
     assert cards[0] == "0000 0000 0000 0001"
 
 
 # Тест №5: Граничный случай — старт больше конца
-def test_start_greater_than_end():
-    gen = card_number_generator(start="0000000000000002", end="0000000000000001")
+def test_start_greater_than_stop():
+    gen = card_number_generator(start="0000000000000002", stop="0000000000000001")
     cards = list(gen)
     assert len(cards) == 0
 
 
 # Тест №6: Генерация произвольного количества карт
 def test_large_range():
-    large_gen = card_number_generator(start="0000000000000001", end="0000000000000003")
+    large_gen = card_number_generator(start="0000000000000001", stop="0000000000000003")
     cards = list(large_gen)
     assert len(cards) == 3
     assert cards == ["0000 0000 0000 0001", "0000 0000 0000 0002", "0000 0000 0000 0003"]

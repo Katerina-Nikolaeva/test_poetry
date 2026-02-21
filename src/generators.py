@@ -29,13 +29,13 @@ def transaction_descriptions(transactions: list) -> Iterator[Dict]:
         yield transaction["description"]
 
 
-def card_number_generator(start: str = "0000000000000001", end: str = "9999999999999999") -> Iterator[str]:
+def card_number_generator(start: str = "0000000000000001", stop: str = "9999999999999999") -> Iterator[str]:
     """
     Генератор, выдающий номера банковских карт в формате XXXX XXXX XXXX XXXX.
     start и end — начальный и конечный номера карт в формате строки.
     """
     start_num = int(start)
-    end_num = int(end)
+    end_num = int(stop)
 
     # Перебираем номера карточек в указанном диапазоне
     for num in range(start_num, end_num + 1):
