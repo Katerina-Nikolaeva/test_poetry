@@ -1,3 +1,5 @@
+all: lint tests coverage
+
 # Запуск всех линтеров
 lint: black isort flake8 mypy
 
@@ -24,6 +26,21 @@ mypy:
 	@echo
 	@echo "-> Run mypy..."
 	@poetry run mypy .
+
+tests:
+	@echo
+	@echo "-> Run tests..."
+	@pytest
+
+coverage:
+	@echo
+	@echo "-> Check tests coverage..."
+	@poetry run pytest --cov
+
+coverage-open: coverage
+	@echo
+	@echo "-> Open tests coverage..."
+	@open htmlcov/index.html
 
 # Очистка
 clean:

@@ -35,7 +35,7 @@ def get_mask_account(account_number: str) -> str:
     Функция маскировки номера банковского счета.
 
     Parameters:
-      - account_number (str): Номер банковского счета.
+      - account_number (str): Номер банковского счета, длина должна быть не меньше 6 символов.
     Примеры:
       - 73654108430135874305
 
@@ -44,10 +44,13 @@ def get_mask_account(account_number: str) -> str:
     Примеры:
       - **4305
     """
-    # Берём последние 4 цифры номера счёта
-    last_four_digits = account_number[-4:]
+    if len(account_number) >= 6:
+        # Берём последние 4 цифры номера счёта
+        last_four_digits = account_number[-4:]
 
-    # Создаём маску в формате "**XXXX"
-    masked_account = f"**{last_four_digits}"
+        # Создаём маску в формате "**XXXX"
+        masked_account = f"**{last_four_digits}"
+    else:
+        masked_account = ""
 
     return masked_account
