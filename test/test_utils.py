@@ -45,10 +45,12 @@ class TestLoadAndConvertTransactions(unittest.TestCase):
         ]
         self.assertEqual(result, expected_result)
 
-    @patch('builtins.open', side_effect=FileNotFoundError)
-    def test_file_not_found(self, mock_open):
+    def test_file_not_found(self):
+        # Намерен используем заведомо несуществующий путь к файлу
+        non_existent_file_path = '/some/path/that/doesnt/exist/operations.json'
+
         # Выполняем функцию
-        result = load_and_convert_transactions('data/operations.json')
+        result = load_and_convert_transactions(non_existent_file_path)
 
         # Проверяем, что результат пустой
         self.assertEqual(result, [])

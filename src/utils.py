@@ -3,6 +3,7 @@ import requests
 import json
 import os
 
+
 def load_and_convert_transactions(file_path):
     """
     Читает JSON-файл с финансовыми транзакциями и возвращает список словарей.
