@@ -130,8 +130,13 @@ def test_transaction_descriptions_multiple():
             "to": "Счет 14211924144426031657",
         },
     ]
-    expected_descriptions = ["Перевод организации", "Перевод со счета на счет", "Перевод со счета на счет",
-                             "Перевод с карты на карту", "Перевод организации"]
+    expected_descriptions = [
+        "Перевод организации",
+        "Перевод со счета на счет",
+        "Перевод со счета на счет",
+        "Перевод с карты на карту",
+        "Перевод организации",
+    ]
     actual_descriptions = list(transaction_descriptions(transactions))
     assert actual_descriptions == expected_descriptions
 

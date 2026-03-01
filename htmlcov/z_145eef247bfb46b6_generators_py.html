@@ -60,12 +60,12 @@
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
-            <a id="prevFileLink" class="nav" href="z_145eef247bfb46b6___init___py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="prevFileLink" class="nav" href="z_145eef247bfb46b6_decorators_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="z_145eef247bfb46b6_masks_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.1">coverage.py v7.13.1</a>,
-            created at 2026-02-21 23:14 +0300
+            created at 2026-03-01 00:39 +0300
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -111,13 +111,13 @@
     <p class="run"><span class="n"><a id="t29" href="#t29">29</a></span><span class="t">        <span class="key">yield</span> <span class="nam">transaction</span><span class="op">[</span><span class="str">"description"</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t30" href="#t30">30</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t"><span class="key">def</span> <span class="nam">card_number_generator</span><span class="op">(</span><span class="nam">start</span><span class="op">:</span> <span class="nam">str</span> <span class="op">=</span> <span class="str">"0000000000000001"</span><span class="op">,</span> <span class="nam">end</span><span class="op">:</span> <span class="nam">str</span> <span class="op">=</span> <span class="str">"9999999999999999"</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Iterator</span><span class="op">[</span><span class="nam">str</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t"><span class="key">def</span> <span class="nam">card_number_generator</span><span class="op">(</span><span class="nam">start</span><span class="op">:</span> <span class="nam">str</span> <span class="op">=</span> <span class="str">"0000000000000001"</span><span class="op">,</span> <span class="nam">stop</span><span class="op">:</span> <span class="nam">str</span> <span class="op">=</span> <span class="str">"9999999999999999"</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Iterator</span><span class="op">[</span><span class="nam">str</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t"><span class="str">    &#1043;&#1077;&#1085;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;, &#1074;&#1099;&#1076;&#1072;&#1102;&#1097;&#1080;&#1081; &#1085;&#1086;&#1084;&#1077;&#1088;&#1072; &#1073;&#1072;&#1085;&#1082;&#1086;&#1074;&#1089;&#1082;&#1080;&#1093; &#1082;&#1072;&#1088;&#1090; &#1074; &#1092;&#1086;&#1088;&#1084;&#1072;&#1090;&#1077; XXXX XXXX XXXX XXXX.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t"><span class="str">    start &#1080; end &#8212; &#1085;&#1072;&#1095;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1080; &#1082;&#1086;&#1085;&#1077;&#1095;&#1085;&#1099;&#1081; &#1085;&#1086;&#1084;&#1077;&#1088;&#1072; &#1082;&#1072;&#1088;&#1090; &#1074; &#1092;&#1086;&#1088;&#1084;&#1072;&#1090;&#1077; &#1089;&#1090;&#1088;&#1086;&#1082;&#1080;.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">    <span class="nam">start_num</span> <span class="op">=</span> <span class="nam">int</span><span class="op">(</span><span class="nam">start</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">    <span class="nam">end_num</span> <span class="op">=</span> <span class="nam">int</span><span class="op">(</span><span class="nam">end</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">    <span class="nam">end_num</span> <span class="op">=</span> <span class="nam">int</span><span class="op">(</span><span class="nam">stop</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t40" href="#t40">40</a></span><span class="t">    <span class="com"># &#1055;&#1077;&#1088;&#1077;&#1073;&#1080;&#1088;&#1072;&#1077;&#1084; &#1085;&#1086;&#1084;&#1077;&#1088;&#1072; &#1082;&#1072;&#1088;&#1090;&#1086;&#1095;&#1077;&#1082; &#1074; &#1091;&#1082;&#1072;&#1079;&#1072;&#1085;&#1085;&#1086;&#1084; &#1076;&#1080;&#1072;&#1087;&#1072;&#1079;&#1086;&#1085;&#1077;</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t41" href="#t41">41</a></span><span class="t">    <span class="key">for</span> <span class="nam">num</span> <span class="key">in</span> <span class="nam">range</span><span class="op">(</span><span class="nam">start_num</span><span class="op">,</span> <span class="nam">end_num</span> <span class="op">+</span> <span class="num">1</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -129,12 +129,12 @@
 <footer>
     <div class="content">
         <p>
-            <a class="nav" href="z_145eef247bfb46b6___init___py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a class="nav" href="z_145eef247bfb46b6_decorators_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a class="nav" href="z_145eef247bfb46b6_masks_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.1">coverage.py v7.13.1</a>,
-            created at 2026-02-21 23:14 +0300
+            created at 2026-03-01 00:39 +0300
         </p>
     </div>
 </footer>
