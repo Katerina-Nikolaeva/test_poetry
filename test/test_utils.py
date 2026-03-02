@@ -1,71 +1,46 @@
 import unittest
-from unittest.mock import patch
+import os
+import tempfile
+import json
 from src.utils import load_and_convert_transactions
 
 
 class TestLoadAndConvertTransactions(unittest.TestCase):
-    @patch('builtins.open', create=True)
-    def test_load_and_convert_transactions_valid_rub(self, mock_open):
-        # Эмулируем открытие файла и содержание JSON
-        mock_json_data = '''
-        [
-            {
-                "id": 441945886,
-                "state": "EXECUTED",
-                "date": "2019-08-26T10:50:58.294041",
-                "operationAmount": {
-                    "amount": "31957.58",
-                    "currency": {
-                        "name": "руб.",
-                        "code": "RUB"
-                    }
-                }
-            }
-        ]
-        '''
-        mock_open.return_value.__enter__.return_value.read.return_value = mock_json_data
+    def setUp(self):
+        # Создание временного файла с корректными данными
+        self.test_file_correct = tempfile.NamedTemporaryFile(mode="w+", delete=False)
+        correct_data = [{"id": 1, "amount": 100}, {"id": 2, "amount": 200}]
+        json.dump(correct_data, self.test_file_correct)
+        self.test_file_correct.close()
 
-        # Выполняем функцию
-        result = load_and_convert_transactions('data/operations.json')
+        # Создание временного файла с неправильными данными (несписок)
+        self.test_file_incorrect = tempfile.NamedTemporaryFile(mode="w+", delete=False)
+        incorrect_data = {"key": "value"}  # Некорректные данные (не список)
+        json.dump(incorrect_data, self.test_file_incorrect)
+        self.test_file_incorrect.close()
 
-        # Проверяем результат
-        expected_result = [
-            {
-                "id": 441945886,
-                "state": "EXECUTED",
-                "date": "2019-08-26T10:50:58.294041",
-                "operationAmount": {
-                    "amount": "31957.58",
-                    "currency": {
-                        "name": "руб.",
-                        "code": "RUB"
-                    }
-                }
-            }
-        ]
+    def tearDown(self):
+        # Удаляем временные файлы после завершения тестов
+        os.remove(self.test_file_correct.name)
+        os.remove(self.test_file_incorrect.name)
+
+    def test_load_and_convert_transactions_correct_file(self):
+        # Тестируем чтение корректного файла
+        result = load_and_convert_transactions(self.test_file_correct.name)
+        expected_result = [{"id": 1, "amount": 100}, {"id": 2, "amount": 200}]
         self.assertEqual(result, expected_result)
 
-    def test_file_not_found(self):
-        # Намерен используем заведомо несуществующий путь к файлу
-        non_existent_file_path = '/some/path/that/doesnt/exist/operations.json'
-
-        # Выполняем функцию
-        result = load_and_convert_transactions(non_existent_file_path)
-
-        # Проверяем, что результат пустой
+    def test_load_and_convert_transactions_incorrect_format(self):
+        # Тестируем чтение файла с неправильным форматом (не список)
+        result = load_and_convert_transactions(self.test_file_incorrect.name)
         self.assertEqual(result, [])
 
-    @patch('builtins.open', create=True)
-    def test_json_decode_error(self, mock_open):
-        # Эмулируем открытие файла с некорректным JSON
-        mock_open.return_value.__enter__.return_value.read.return_value = '{invalid json}'
-
-        # Выполняем функцию
-        result = load_and_convert_transactions('data/operations.json')
-
-        # Проверяем, что результат пустой
+    def test_load_and_convert_transactions_nonexistent_file(self):
+        # Тестируем попытку прочитать несуществующий файл
+        non_existent_file = "/nonexistent/path/to/file.json"
+        result = load_and_convert_transactions(non_existent_file)
         self.assertEqual(result, [])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
