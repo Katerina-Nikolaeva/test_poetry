@@ -1,7 +1,7 @@
 import json
 
 
-def load_and_convert_transactions(file_path):
+def load_file_list(file_path):
     """
     Читает JSON-файл с финансовыми транзакциями и возвращает список словарей.
     Если файл пустой, содержит не список или не найден, функция возвращает пустой список.

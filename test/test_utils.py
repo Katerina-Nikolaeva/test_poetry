@@ -2,7 +2,7 @@ import unittest
 import os
 import tempfile
 import json
-from src.utils import load_and_convert_transactions
+from src.utils import load_file_list
 
 
 class TestLoadAndConvertTransactions(unittest.TestCase):
@@ -26,19 +26,19 @@ class TestLoadAndConvertTransactions(unittest.TestCase):
 
     def test_load_and_convert_transactions_correct_file(self):
         # Тестируем чтение корректного файла
-        result = load_and_convert_transactions(self.test_file_correct.name)
+        result = load_file_list(self.test_file_correct.name)
         expected_result = [{"id": 1, "amount": 100}, {"id": 2, "amount": 200}]
         self.assertEqual(result, expected_result)
 
     def test_load_and_convert_transactions_incorrect_format(self):
         # Тестируем чтение файла с неправильным форматом (не список)
-        result = load_and_convert_transactions(self.test_file_incorrect.name)
+        result = load_file_list(self.test_file_incorrect.name)
         self.assertEqual(result, [])
 
     def test_load_and_convert_transactions_nonexistent_file(self):
         # Тестируем попытку прочитать несуществующий файл
         non_existent_file = "/nonexistent/path/to/file.json"
-        result = load_and_convert_transactions(non_existent_file)
+        result = load_file_list(non_existent_file)
         self.assertEqual(result, [])
 
 

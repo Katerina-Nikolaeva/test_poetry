@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 import requests
 
-API_BASE_URL = "https://api.apilayer.com/exchangerates_data/latest"
+API_BASE_URL = "https://api.apilayer.com/currency_data/convert"
 load_dotenv()
 api_key = os.getenv("EXCHANGE_RATES_API_KEY")
 
