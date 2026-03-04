@@ -2,33 +2,30 @@ from dotenv import load_dotenv
 import os
 import requests
 
-API_BASE_URL = "https://api.apilayer.com/currency_data/convert"
 load_dotenv()
-api_key = os.getenv("EXCHANGE_RATES_API_KEY")
+
+API_BASE_URL = "https://api.apilayer.com/currency_data/convert"
+# API_BASE_URL = "https://api.apilayer.com/exchangerates_data/convert"
+api_key = os.getenv("API_KEY")
+if not api_key:
+    raise RuntimeError("No API key loaded from .env")
+print(f"API key OK: {api_key[:10]}...")
 
 
 def get_exchange_rate(from_currency: str, to_currency: str) -> float:
-    """
-    Получает текущий курс обмена валют с использованием apilayer API.
+    headers = {"apikey": api_key}
+    params = {"from": from_currency, "to": to_currency, "amount": 1}
 
-    :param from_currency: Базовая валюта (например, USD)
-    :param to_currency: Цель конвертации (например, RUB)
-    :return: Текущий курс конвертации
-    """
-    url = f"{API_BASE_URL}?access_key={api_key}&base={from_currency}&symbols={to_currency}"
-    response = requests.get(url)
-    response.raise_for_status()  # Проверка успешного статуса запроса
-    rates = response.json()["rates"]
-    return rates[to_currency]
+    response = requests.get(API_BASE_URL, headers=headers, params=params)
+    response.raise_for_status()
+    data = response.json()
+
+    # Пример структуры (может отличаться по версии API):
+    # {"success": True, "result": 90.5}
+    return float(data["result"])
 
 
-def get_convert(transaction_conv):
-    """
-    Функция, которая принимает на вход транзакцию и возвращает сумму транзакции в рублях.
-
-    :param transaction_conv: Транзакция с указанием суммы и валюты
-    :return: Сумма транзакции в рублях (float)
-    """
+def get_convert(transaction_conv: dict):
     amount = float(transaction_conv["operationAmount"]["amount"])
     currency_name = transaction_conv["operationAmount"]["currency"]["name"]
 
