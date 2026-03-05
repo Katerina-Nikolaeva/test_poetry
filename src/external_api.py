@@ -20,20 +20,33 @@ def get_exchange_rate(from_currency: str, to_currency: str) -> float:
     response.raise_for_status()
     data = response.json()
 
-    # Пример структуры (может отличаться по версии API):
-    # {"success": True, "result": 90.5}
     return float(data["result"])
+    # return float(data["rates"][to_currency])
 
 
 def get_convert(transaction_conv: dict):
+    """
+    Функция, которая принимает на вход транзакцию и возвращает сумму транзакции в рублях.
+
+    :param transaction_conv: Транзакция с указанием суммы и валюты
+    :return: Сумма транзакции в рублях (float)
+    """
     amount = float(transaction_conv["operationAmount"]["amount"])
     currency_name = transaction_conv["operationAmount"]["currency"]["name"]
 
     if currency_name == "RUB":
         return amount
     elif currency_name in ["USD", "EUR"]:
-        exchange_rate = get_exchange_rate(currency_name, "RUB")
-        return amount * exchange_rate
+        headers = {"apikey": api_key}
+        params = {"from": currency_name, "to": "RUB", "amount": amount}
+
+        response = requests.get(API_BASE_URL, headers=headers, params=params)
+        response.raise_for_status()
+        data = response.json()
+
+        # Пример структуры (может меняться в зависимости от версии API):
+        # {"success": True, "result": 9050.0}
+        return float(data["result"])
     else:
         raise ValueError(f"Валюта {currency_name} не поддерживается")
 
