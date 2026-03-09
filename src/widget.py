@@ -19,12 +19,18 @@ def mask_account_card(account_card: str) -> str:
       - Visa Platinum 7000 79** **** 6361
       - Счет **4305
     """
-    masked_account_card = ""
+    account_type_account = "Счет"
+    account_types = [account_type_account, "Visa", "Visa Platinum", "Maestro", "Mastercard"]
 
     # расщепляем строку на две — по первому пробелу с конца
     account_type, account_number = account_card.rsplit(" ", 1)
 
-    if account_type == "Счет":
+    if account_type not in account_types:
+        raise ValueError(
+            f"Некорректные данные: тип не является счетом или картой. Возможные валидные данные: {account_types}."
+        )
+
+    if account_type == account_type_account:
         masked_account_card = f"{account_type} {get_mask_account(account_number)}"
     else:
         masked_account_card = f"{account_type} {get_mask_card_number(account_number)}"
