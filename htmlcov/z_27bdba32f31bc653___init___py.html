@@ -55,17 +55,17 @@
         </aside>
         <h2>
             <span class="text">880 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">54<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">826<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">57<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">823<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
             <a id="prevFileLink" class="nav" href="z_b2db0051b2421572_code_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
-            <a id="nextFileLink" class="nav" href="z_9fde773065cba9a6___init___py.html">&#xbb; next</a>
+            <a id="nextFileLink" class="nav" href="z_b2db0051b2421572_contextlib_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.1">coverage.py v7.13.1</a>,
-            created at 2026-03-01 00:39 +0300
+            created at 2026-03-07 01:47 +0300
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -534,10 +534,10 @@
     <p class="pln"><span class="n"><a id="t452" href="#t452">452</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t453" href="#t453">453</a></span><span class="t">    <span class="op">@</span><span class="nam">classmethod</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t454" href="#t454">454</a></span><span class="t">    <span class="key">def</span> <span class="nam">_make</span><span class="op">(</span><span class="nam">cls</span><span class="op">,</span> <span class="nam">iterable</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t455" href="#t455">455</a></span><span class="t">        <span class="nam">result</span> <span class="op">=</span> <span class="nam">tuple_new</span><span class="op">(</span><span class="nam">cls</span><span class="op">,</span> <span class="nam">iterable</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t456" href="#t456">456</a></span><span class="t">        <span class="key">if</span> <span class="nam">_len</span><span class="op">(</span><span class="nam">result</span><span class="op">)</span> <span class="op">!=</span> <span class="nam">num_fields</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t455" href="#t455">455</a></span><span class="t">        <span class="nam">result</span> <span class="op">=</span> <span class="nam">tuple_new</span><span class="op">(</span><span class="nam">cls</span><span class="op">,</span> <span class="nam">iterable</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t456" href="#t456">456</a></span><span class="t">        <span class="key">if</span> <span class="nam">_len</span><span class="op">(</span><span class="nam">result</span><span class="op">)</span> <span class="op">!=</span> <span class="nam">num_fields</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t457" href="#t457">457</a></span><span class="t">            <span class="key">raise</span> <span class="nam">TypeError</span><span class="op">(</span><span class="fst">f'</span><span class="fst">Expected </span><span class="op">{</span><span class="nam">num_fields</span><span class="op">}</span><span class="fst"> arguments, got </span><span class="op">{</span><span class="nam">len</span><span class="op">(</span><span class="nam">result</span><span class="op">)</span><span class="op">}</span><span class="fst">'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t458" href="#t458">458</a></span><span class="t">        <span class="key">return</span> <span class="nam">result</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t458" href="#t458">458</a></span><span class="t">        <span class="key">return</span> <span class="nam">result</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t459" href="#t459">459</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t460" href="#t460">460</a></span><span class="t">    <span class="nam">_make</span><span class="op">.</span><span class="nam">__func__</span><span class="op">.</span><span class="nam">__doc__</span> <span class="op">=</span> <span class="op">(</span><span class="fst">f'</span><span class="fst">Make a new </span><span class="op">{</span><span class="nam">typename</span><span class="op">}</span><span class="fst"> object from a sequence </span><span class="fst">'</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t461" href="#t461">461</a></span><span class="t">                              <span class="str">'or iterable'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -1691,10 +1691,10 @@
         <p>
             <a class="nav" href="z_b2db0051b2421572_code_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
-            <a class="nav" href="z_9fde773065cba9a6___init___py.html">&#xbb; next</a>
+            <a class="nav" href="z_b2db0051b2421572_contextlib_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.1">coverage.py v7.13.1</a>,
-            created at 2026-03-01 00:39 +0300
+            created at 2026-03-07 01:47 +0300
         </p>
     </div>
 </footer>

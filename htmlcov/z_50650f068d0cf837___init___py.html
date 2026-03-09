@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for /opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py: 8%</title>
+    <title>Coverage for /opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py: 14%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_c827f16f.png">
     <link rel="stylesheet" href="style_cb_9ff733b0.css" type="text/css">
     <script src="coverage_html_cb_dd2e7eb5.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>&#8201;/&#8201;opt&#8201;/&#8201;homebrew&#8201;/&#8201;Cellar&#8201;/&#8201;python@3.14&#8201;/&#8201;3.14.0&#8201;/&#8201;Frameworks&#8201;/&#8201;Python.framework&#8201;/&#8201;Versions&#8201;/&#8201;3.14&#8201;/&#8201;lib&#8201;/&#8201;python3.14&#8201;/&#8201;json&#8201;/&#8201;__init__.py</b>:
-            <span class="pc_cov">8%</span>
+            <span class="pc_cov">14%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,17 +55,17 @@
         </aside>
         <h2>
             <span class="text">65 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">5<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">60<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">9<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">56<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">1<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
-            <a id="prevFileLink" class="nav" href="z_b2db0051b2421572_ipaddress_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="prevFileLink" class="nav" href="z_b2db0051b2421572_inspect_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="z_50650f068d0cf837_decoder_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.1">coverage.py v7.13.1</a>,
-            created at 2026-03-01 00:39 +0300
+            created at 2026-03-07 01:47 +0300
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -244,11 +244,11 @@
     <p class="pln"><span class="n"><a id="t162" href="#t162">162</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t163" href="#t163">163</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t164" href="#t164">164</a></span><span class="t">    <span class="com"># cached encoder</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t165" href="#t165">165</a></span><span class="t">    <span class="key">if</span> <span class="op">(</span><span class="key">not</span> <span class="nam">skipkeys</span> <span class="key">and</span> <span class="nam">ensure_ascii</span> <span class="key">and</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t166" href="#t166">166</a></span><span class="t">        <span class="nam">check_circular</span> <span class="key">and</span> <span class="nam">allow_nan</span> <span class="key">and</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t167" href="#t167">167</a></span><span class="t">        <span class="nam">cls</span> <span class="key">is</span> <span class="key">None</span> <span class="key">and</span> <span class="nam">indent</span> <span class="key">is</span> <span class="key">None</span> <span class="key">and</span> <span class="nam">separators</span> <span class="key">is</span> <span class="key">None</span> <span class="key">and</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t168" href="#t168">168</a></span><span class="t">        <span class="nam">default</span> <span class="key">is</span> <span class="key">None</span> <span class="key">and</span> <span class="key">not</span> <span class="nam">sort_keys</span> <span class="key">and</span> <span class="key">not</span> <span class="nam">kw</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t169" href="#t169">169</a></span><span class="t">        <span class="nam">iterable</span> <span class="op">=</span> <span class="nam">_default_encoder</span><span class="op">.</span><span class="nam">iterencode</span><span class="op">(</span><span class="nam">obj</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t165" href="#t165">165</a></span><span class="t">    <span class="key">if</span> <span class="op">(</span><span class="key">not</span> <span class="nam">skipkeys</span> <span class="key">and</span> <span class="nam">ensure_ascii</span> <span class="key">and</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t166" href="#t166">166</a></span><span class="t">        <span class="nam">check_circular</span> <span class="key">and</span> <span class="nam">allow_nan</span> <span class="key">and</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t167" href="#t167">167</a></span><span class="t">        <span class="nam">cls</span> <span class="key">is</span> <span class="key">None</span> <span class="key">and</span> <span class="nam">indent</span> <span class="key">is</span> <span class="key">None</span> <span class="key">and</span> <span class="nam">separators</span> <span class="key">is</span> <span class="key">None</span> <span class="key">and</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t168" href="#t168">168</a></span><span class="t">        <span class="nam">default</span> <span class="key">is</span> <span class="key">None</span> <span class="key">and</span> <span class="key">not</span> <span class="nam">sort_keys</span> <span class="key">and</span> <span class="key">not</span> <span class="nam">kw</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t169" href="#t169">169</a></span><span class="t">        <span class="nam">iterable</span> <span class="op">=</span> <span class="nam">_default_encoder</span><span class="op">.</span><span class="nam">iterencode</span><span class="op">(</span><span class="nam">obj</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t170" href="#t170">170</a></span><span class="t">    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t171" href="#t171">171</a></span><span class="t">        <span class="key">if</span> <span class="nam">cls</span> <span class="key">is</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t172" href="#t172">172</a></span><span class="t">            <span class="nam">cls</span> <span class="op">=</span> <span class="nam">JSONEncoder</span>&nbsp;</span><span class="r"></span></p>
@@ -258,8 +258,8 @@
     <p class="mis mis2 show_mis"><span class="n"><a id="t176" href="#t176">176</a></span><span class="t">            <span class="nam">default</span><span class="op">=</span><span class="nam">default</span><span class="op">,</span> <span class="nam">sort_keys</span><span class="op">=</span><span class="nam">sort_keys</span><span class="op">,</span> <span class="op">**</span><span class="nam">kw</span><span class="op">)</span><span class="op">.</span><span class="nam">iterencode</span><span class="op">(</span><span class="nam">obj</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t177" href="#t177">177</a></span><span class="t">    <span class="com"># could accelerate with writelines in some versions of Python, at</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t178" href="#t178">178</a></span><span class="t">    <span class="com"># a debuggability cost</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t179" href="#t179">179</a></span><span class="t">    <span class="key">for</span> <span class="nam">chunk</span> <span class="key">in</span> <span class="nam">iterable</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t180" href="#t180">180</a></span><span class="t">        <span class="nam">fp</span><span class="op">.</span><span class="nam">write</span><span class="op">(</span><span class="nam">chunk</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t179" href="#t179">179</a></span><span class="t">    <span class="key">for</span> <span class="nam">chunk</span> <span class="key">in</span> <span class="nam">iterable</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t180" href="#t180">180</a></span><span class="t">        <span class="nam">fp</span><span class="op">.</span><span class="nam">write</span><span class="op">(</span><span class="nam">chunk</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t181" href="#t181">181</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t182" href="#t182">182</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t183" href="#t183">183</a></span><span class="t"><span class="key">def</span> <span class="nam">dumps</span><span class="op">(</span><span class="nam">obj</span><span class="op">,</span> <span class="op">*</span><span class="op">,</span> <span class="nam">skipkeys</span><span class="op">=</span><span class="key">False</span><span class="op">,</span> <span class="nam">ensure_ascii</span><span class="op">=</span><span class="key">True</span><span class="op">,</span> <span class="nam">check_circular</span><span class="op">=</span><span class="key">True</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
@@ -443,12 +443,12 @@
 <footer>
     <div class="content">
         <p>
-            <a class="nav" href="z_b2db0051b2421572_ipaddress_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a class="nav" href="z_b2db0051b2421572_inspect_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a class="nav" href="z_50650f068d0cf837_decoder_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.1">coverage.py v7.13.1</a>,
-            created at 2026-03-01 00:39 +0300
+            created at 2026-03-07 01:47 +0300
         </p>
     </div>
 </footer>

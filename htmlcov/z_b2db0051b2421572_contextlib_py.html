@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for /opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py: 14%</title>
+    <title>Coverage for /opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py: 16%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_c827f16f.png">
     <link rel="stylesheet" href="style_cb_9ff733b0.css" type="text/css">
     <script src="coverage_html_cb_dd2e7eb5.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>&#8201;/&#8201;opt&#8201;/&#8201;homebrew&#8201;/&#8201;Cellar&#8201;/&#8201;python@3.14&#8201;/&#8201;3.14.0&#8201;/&#8201;Frameworks&#8201;/&#8201;Python.framework&#8201;/&#8201;Versions&#8201;/&#8201;3.14&#8201;/&#8201;lib&#8201;/&#8201;python3.14&#8201;/&#8201;contextlib.py</b>:
-            <span class="pc_cov">14%</span>
+            <span class="pc_cov">16%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,17 +55,17 @@
         </aside>
         <h2>
             <span class="text">379 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">54<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">325<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">60<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">319<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
-            <a id="prevFileLink" class="nav" href="z_b78c9d4a5f1b07f2__base_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="prevFileLink" class="nav" href="z_27bdba32f31bc653___init___py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
-            <a id="nextFileLink" class="nav" href="z_b2db0051b2421572_contextvars_py.html">&#xbb; next</a>
+            <a id="nextFileLink" class="nav" href="z_01f0c8ce8eff5a4a___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.1">coverage.py v7.13.1</a>,
-            created at 2026-03-01 00:39 +0300
+            created at 2026-03-07 01:47 +0300
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -676,14 +676,14 @@
     <p class="run"><span class="n"><a id="t594" href="#t594">594</a></span><span class="t">        <span class="nam">suppressed_exc</span> <span class="op">=</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t595" href="#t595">595</a></span><span class="t">        <span class="nam">pending_raise</span> <span class="op">=</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t596" href="#t596">596</a></span><span class="t">        <span class="key">while</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_exit_callbacks</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t597" href="#t597">597</a></span><span class="t">            <span class="nam">is_sync</span><span class="op">,</span> <span class="nam">cb</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_exit_callbacks</span><span class="op">.</span><span class="nam">pop</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t598" href="#t598">598</a></span><span class="t">            <span class="key">assert</span> <span class="nam">is_sync</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t599" href="#t599">599</a></span><span class="t">            <span class="key">try</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t600" href="#t600">600</a></span><span class="t">                <span class="key">if</span> <span class="nam">exc</span> <span class="key">is</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t601" href="#t601">601</a></span><span class="t">                    <span class="nam">exc_details</span> <span class="op">=</span> <span class="key">None</span><span class="op">,</span> <span class="key">None</span><span class="op">,</span> <span class="key">None</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t597" href="#t597">597</a></span><span class="t">            <span class="nam">is_sync</span><span class="op">,</span> <span class="nam">cb</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_exit_callbacks</span><span class="op">.</span><span class="nam">pop</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t598" href="#t598">598</a></span><span class="t">            <span class="key">assert</span> <span class="nam">is_sync</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t599" href="#t599">599</a></span><span class="t">            <span class="key">try</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t600" href="#t600">600</a></span><span class="t">                <span class="key">if</span> <span class="nam">exc</span> <span class="key">is</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t601" href="#t601">601</a></span><span class="t">                    <span class="nam">exc_details</span> <span class="op">=</span> <span class="key">None</span><span class="op">,</span> <span class="key">None</span><span class="op">,</span> <span class="key">None</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t602" href="#t602">602</a></span><span class="t">                <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t603" href="#t603">603</a></span><span class="t">                    <span class="nam">exc_details</span> <span class="op">=</span> <span class="nam">type</span><span class="op">(</span><span class="nam">exc</span><span class="op">)</span><span class="op">,</span> <span class="nam">exc</span><span class="op">,</span> <span class="nam">exc</span><span class="op">.</span><span class="nam">__traceback__</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t604" href="#t604">604</a></span><span class="t">                <span class="key">if</span> <span class="nam">cb</span><span class="op">(</span><span class="op">*</span><span class="nam">exc_details</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t604" href="#t604">604</a></span><span class="t">                <span class="key">if</span> <span class="nam">cb</span><span class="op">(</span><span class="op">*</span><span class="nam">exc_details</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t605" href="#t605">605</a></span><span class="t">                    <span class="nam">suppressed_exc</span> <span class="op">=</span> <span class="key">True</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t606" href="#t606">606</a></span><span class="t">                    <span class="nam">pending_raise</span> <span class="op">=</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t607" href="#t607">607</a></span><span class="t">                    <span class="nam">exc</span> <span class="op">=</span> <span class="key">None</span>&nbsp;</span><span class="r"></span></p>
@@ -898,12 +898,12 @@
 <footer>
     <div class="content">
         <p>
-            <a class="nav" href="z_b78c9d4a5f1b07f2__base_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a class="nav" href="z_27bdba32f31bc653___init___py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
-            <a class="nav" href="z_b2db0051b2421572_contextvars_py.html">&#xbb; next</a>
+            <a class="nav" href="z_01f0c8ce8eff5a4a___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.1">coverage.py v7.13.1</a>,
-            created at 2026-03-01 00:39 +0300
+            created at 2026-03-07 01:47 +0300
         </p>
     </div>
 </footer>
